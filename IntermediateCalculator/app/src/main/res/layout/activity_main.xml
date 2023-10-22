@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/number1txt"
+        android:layout_width="323dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="39dp"
+        android:ems="10"
+        android:hint="Enter Number"
+        android:inputType="number|numberDecimal|numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/number2txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/number2txt"
+        android:layout_width="322dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="Enter Number"
+        android:inputType="number|numberDecimal|numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintStart_toStartOf="@+id/number1txt"
+        app:layout_constraintTop_toBottomOf="@+id/number1txt" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="285dp"
+        android:layout_height="189dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="118dp"
+        android:hint="Result : 0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tableLayout"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="336dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number2txt">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/toplama"
+                android:layout_width="110dp"
+                android:layout_height="80dp"
+                android:onClick="toplama"
+                android:text="+"
+                android:textColorLink="#F80202" />
+
+            <Button
+                android:id="@+id/cikarma"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="cikarma"
+                android:text="-" />
+
+            <Button
+                android:id="@+id/carpma"
+                android:layout_width="105dp"
+                android:layout_height="match_parent"
+                android:onClick="carpma"
+                android:text="x" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="104dp">
+
+            <Button
+                android:id="@+id/bolme"
+                android:layout_width="106dp"
+                android:layout_height="77dp"
+                android:onClick="bolme"
+                android:text="/" />
+
+            <Button
+                android:id="@+id/yuzde"
+                android:layout_width="122dp"
+                android:layout_height="77dp"
+                android:onClick="yuzde"
+                android:text="%" />
+
+            <Button
+                android:id="@+id/kareKok"
+                android:layout_width="109dp"
+                android:layout_height="77dp"
+                android:onClick="kareKok"
+                android:text="√" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
